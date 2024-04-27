@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor simples</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Conversor de moedas simples</h1>
+    </header>
+    <section>
+        <form action="desafio_3.php" method="get">
+            <label for="valor" step="0.010">Valor em R$</label>
+            <input type="number" pattern="[0-9]+([,\.][0-9]+)?" min="0" step="any" name="valor">
+            <input type="submit" value="Conersão">
+            <input type="reset" value="Resetar">
+            <p style="font-size: 10px;"><a href="javascript:history.go(+1)">Avançar</a></p>
+        </form>
+    </section>
+</body>
+</html>
