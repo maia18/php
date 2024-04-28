@@ -12,16 +12,20 @@
     </header>
     <main>
         <?php
-            $url = 'https://olinda.bcb.gov.br/olinda/servico/PTAX/versao/v1/odata/CotacaoDolarPeriodo(dataInicial=@dataInicial,dataFinalCotacao=@dataFinalCotacao)?@dataInicial=\'04-20-2024\'&@dataFinalCotacao=\'04-27-2024\'&$top=1&$orderby=dataHoraCotacao%20desc&$format=json&$select=cotacaoCompra,dataHoraCotacao';
+
+            $inicio = date("m-d-Y", strtotime("-7 days"));
+            $fim = date("m-d-Y");
+            $url = 'https://olinda.bcb.gov.br/olinda/servico/PTAX/versao/v1/odata/CotacaoDolarPeriodo(dataInicial=@dataInicial,dataFinalCotacao=@dataFinalCotacao)?@dataInicial=\''. $inicio .'\'&@dataFinalCotacao=\''. $fim .'\'&$top=1&$orderby=dataHoraCotacao%20desc&$format=json&$select=cotacaoCompra,dataHoraCotacao';
             
-            $dados = json_decode(file_get_contents($url, true));
-            var_dump($dados);
+            $dados = json_decode(file_get_contents($url), true);
+            // var_dump($dados);
 
+            $cotação = $dados["value"][0]["cotacaoCompra"];
 
-            $num = $_GET["valor"];
+            $num = $_GET["num"];
+            $num_conv = $num / $cotação;
 
-
-
+            echo "R$$num = US$$num_conv";
         ?>
         <p style="font-size: 10px;"><a href="javascript:history.go(-1) ">Retornar</a></p>
     </main>
