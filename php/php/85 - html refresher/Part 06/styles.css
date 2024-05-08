@@ -1,0 +1,8 @@
+body {
+    background-color: rgb(220, 220, 220);
+}
+
+#third-paragraph strong, 
+.main-paragraph strong {
+    color: red;
+}

@@ -1,0 +1,122 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: system-ui, -apple-system, 
+        "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", 
+        "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", 
+        "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+.nav {
+    background-color: #113343;
+    height: 4rem;
+}
+
+.nav__layout {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-brand {
+    display: block;
+    color: white;
+    text-decoration: none;
+    height: 4rem;
+    line-height: 4rem;
+}
+
+.nav-brand__image {
+    width: 3rem;
+    height: 4rem;
+    vertical-align: bottom;
+    color: #71b68a;
+}
+.nav-brand:hover .nav-brand__image {
+    color: #8ed8a9;
+}
+
+.button {
+    display: inline-block;
+    background-color: #F35A39;
+    color: white;
+    text-decoration: none;
+    padding: 0rem 1rem;
+    border-radius: 0.5rem;
+    line-height: 2.5rem;
+    /* text-transform: uppercase; */
+}
+.button:hover {
+    background-color: #d95032;
+}
+
+.button__icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    position: relative;
+    top: 0.4rem;
+    margin-right: 0.4rem;
+}
+
+.main-heading {
+    color: #113343;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 0.25em;
+}
+
+.container {
+    width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin: 0 auto;
+}
+@media (min-width: 576px) {
+    .container {
+        max-width: 540px;
+    }
+}
+@media (min-width: 768px) {
+    .container {
+        max-width: 720px;
+    }
+}
+@media (min-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+}
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+}
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1320px;
+    }
+}
+
+.card {
+    background-color: #F3F4F5;
+    padding: 0rem;
+    margin-bottom: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5);
+    display: flex;
+    overflow: hidden;
+}
+
+.card__heading {
+    margin: 0;
+}
+
+.card__image {
+    display: block;
+    width: 30rem;
+    height: 20rem;
+    object-fit: cover;
+}

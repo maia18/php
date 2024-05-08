@@ -1,0 +1,14 @@
+body {
+    background-color: rgb(75, 75, 75);
+}
+
+
+.app-container {
+    width: 25rem;
+    background-color: white;
+    height: 40rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: calc((100vh - 40rem) / 2);
+    box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.5);
+}
